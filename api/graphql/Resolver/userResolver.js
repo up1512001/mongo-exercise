@@ -1,0 +1,794 @@
+const User = require('../../../model/User')
+module.exports = {
+    getUser:async(args) => {
+        // console.log(args,"TEST")
+        //Storing Data
+        // const storedata = new User({
+        //     username:args.username,
+        //     age:args.age,
+        //     phone:args.phone,
+        //     address:args.address
+        // })
+
+        const storedata = new User({
+            asin: "B0BDJH3V3Q",
+    attributes: {
+        cellular_technology: [
+            {
+                language_tag: "en_IN",
+                value: "5G",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        version_for_country: [
+            {
+                value: "IN",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        included_components: [
+            {
+                language_tag: "en_IN",
+                value: "iPhone, USB-C to Lightning Cable",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        item_weight: [
+            {
+                unit: "kilograms",
+                value: 0.172,
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        model_name: [
+            {
+                language_tag: "en_IN",
+                value: "iPhone",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        bullet_point: [
+            {
+                language_tag: "en_IN",
+                value: "15.40 cm (6.1-inch) Super Retina XDR display",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                language_tag: "en_IN",
+                value: "Advanced camera system for better photos in any light",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                language_tag: "en_IN",
+                value: "Cinematic mode now in 4K Dolby Vision up to 30 fps",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                language_tag: "en_IN",
+                value: "Action mode for smooth, steady, handheld videos",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                language_tag: "en_IN",
+                value: "Vital safety technology — Crash Detection calls for help when you can’t",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        hazmat: [
+            {
+                aspect: "proper_shipping_name",
+                value: "LITHIUM ION BATTERIES CONTAINED IN EQUIPMENT",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "united_nations_regulatory_id",
+                value: "UN3481",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "regulatory_packing_group",
+                value: "II",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "transportation_regulatory_class",
+                value: "9",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "exception",
+                value: "AE_SmallLithiumIonBatteryInEquipment",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "exception",
+                value: "AU_SmallLithiumIonBatteryInEquipment",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "exception",
+                value: "BE_SmallLithiumIonBatteryInEquipment",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "exception",
+                value: "BR_SmallLithiumIonBatteryInEquipment",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "exception",
+                value: "CA_SmallLithiumIonBatteryInEquipment",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "exception",
+                value: "CN_SmallLithiumIonBatteryInEquipment",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "exception",
+                value: "DE_SmallLithiumIonBatteryInEquipment",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "exception",
+                value: "EG_SmallLithiumIonBatteryInEquipment",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "exception",
+                value: "ES_SmallLithiumIonBatteryInEquipment",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "exception",
+                value: "FR_SmallLithiumIonBatteryInEquipment",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "exception",
+                value: "GB_SmallLithiumIonBatteryInEquipment",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "exception",
+                value: "IN_SmallLithiumIonBatteryInEquipment",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "exception",
+                value: "IT_SmallLithiumIonBatteryInEquipment",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "exception",
+                value: "JP_SmallLithiumIonBatteryInEquipment",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "exception",
+                value: "MX_SmallLithiumIonBatteryInEquipment",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "exception",
+                value: "NL_SmallLithiumIonBatteryInEquipment",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "exception",
+                value: "PL_SmallLithiumIonBatteryInEquipment",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "exception",
+                value: "SA_SmallLithiumIonBatteryInEquipment",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "exception",
+                value: "SE_SmallLithiumIonBatteryInEquipment",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "exception",
+                value: "SG_SmallLithiumIonBatteryInEquipment",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "exception",
+                value: "TR_SmallLithiumIonBatteryInEquipment",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                aspect: "exception",
+                value: "US_SmallLithiumIonBatteryInEquipment",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        connector_type: [
+            {
+                language_tag: "en_IN",
+                value: "Lightning",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        item_dimensions: [
+            {
+                width: {
+                    unit: "centimeters",
+                    value: 7.15
+                },
+                length: {
+                    unit: "centimeters",
+                    value: 0.78
+                },
+                height: {
+                    unit: "centimeters",
+                    value: 14.67
+                },
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        brand: [
+            {
+                language_tag: "en_IN",
+                value: "Apple",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        externally_assigned_product_identifier: [
+            {
+                value: "194253412694",
+                type: "upc",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                value: "0194253412694",
+                type: "ean",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        target_region: [
+            {
+                language_tag: "en_IN",
+                value: "Asia",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        flash_memory: [
+            {
+                installed_size: [
+                    {
+                        unit: "GB",
+                        value: 512
+                    }
+                ],
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        number_of_items: [
+            {
+                value: 1,
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        item_package_dimensions: [
+            {
+                length: {
+                    unit: "centimeters",
+                    value: 3.2
+                },
+                width: {
+                    unit: "centimeters",
+                    value: 8.8
+                },
+                height: {
+                    unit: "centimeters",
+                    value: 16.5
+                },
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        telephone_type: [
+            {
+                language_tag: "en_IN",
+                value: "Micro-SIM",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        warranty_description: [
+            {
+                language_tag: "en_IN",
+                value: "Apple One (1) Year Limited Warranty",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        packer_contact_information: [
+            {
+                language_tag: "en_IN",
+                value: "(If applicable) Apple India Private Limited No.24, 19th floor, Concorde Tower C, UB City, Vittal Mallya Road, Bangalore - 560 001",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        number_of_lithium_ion_cells: [
+            {
+                value: 1,
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        color: [
+            {
+                language_tag: "en_IN",
+                value: "Blue",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        importer_contact_information: [
+            {
+                language_tag: "en_IN",
+                value: "(If applicable) Apple India Private Limited No.24, 19th floor, Concorde Tower C, UB City, Vittal Mallya Road, Bangalore - 560 001",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        item_type_name: [
+            {
+                language_tag: "en_IN",
+                value: "iPhone",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        item_package_weight: [
+            {
+                unit: "kilograms",
+                value: 0.31,
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        battery: [
+            {
+                cell_composition: [
+                    {
+                        value: "lithium_ion"
+                    }
+                ],
+                weight: [
+                    {
+                        unit: "kilograms",
+                        value: 0.04734
+                    }
+                ],
+                power: [
+                    {
+                        unit: "unknown_modifier",
+                        value: 12
+                    }
+                ],
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        manufacturer: [
+            {
+                language_tag: "en_IN",
+                value: "Apple Computer",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        digital_storage_capacity: [
+            {
+                unit: "GB",
+                value: 512,
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        number_of_boxes: [
+            {
+                value: 1,
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        wireless_provider: [
+            {
+                value: "all_carriers",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        recommended_browse_nodes: [
+            {
+                value: "1805560031",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        operating_system: [
+            {
+                language_tag: "en_IN",
+                value: "iOS",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        lithium_battery: [
+            {
+                energy_content: [
+                    {
+                        unit: "watt_hours",
+                        value: 12.68
+                    }
+                ],
+                weight: [
+                    {
+                        unit: "grams",
+                        value: 47.34
+                    }
+                ],
+                packaging: [
+                    {
+                        value: "batteries_contained_in_equipment"
+                    }
+                ],
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        memory_storage_capacity: [
+            {
+                unit: "GB",
+                value: 512,
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        supplier_declared_dg_hz_regulation: [
+            {
+                value: "not_applicable",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        num_batteries: [
+            {
+                quantity: 1,
+                type: "lithium_ion",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        special_feature: [
+            {
+                language_tag: "en_IN",
+                value: "Dual Camera",
+                marketplace_id: "A21TJRUUN4KGV"
+            },
+            {
+                language_tag: "en_IN",
+                value: "Camera",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        display: [
+            {
+                size: [
+                    {
+                        unit: "inches",
+                        value: 6.1
+                    }
+                ],
+                type: [
+                    {
+                        language_tag: "en_IN",
+                        value: "Super Retina XDR display"
+                    }
+                ],
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        computer_memory: [
+            {
+                size: [
+                    {
+                        unit: "GB",
+                        value: 512
+                    }
+                ],
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        item_name: [
+            {
+                language_tag: "en_IN",
+                value: "iPhone 14 512GB Blue",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        list_price: [
+            {
+                value_with_tax: 109900,
+                currency: "INR",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        effective_still_resolution: [
+            {
+                value: 12,
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        batteries_required: [
+            {
+                value: true,
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        product_site_launch_date: [
+            {
+                value: "2022-09-16T02:29:00-00:00",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        form_factor: [
+            {
+                language_tag: "en_IN",
+                value: "Bar",
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        unit_count: [
+            {
+                value: 1,
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ],
+        batteries_included: [
+            {
+                value: true,
+                marketplace_id: "A21TJRUUN4KGV"
+            }
+        ]
+    },
+    dimensions: [
+        {
+            marketplaceId: "A21TJRUUN4KGV",
+            item: {
+                height: {
+                    unit: "inches",
+                    value: 5.77559054529
+                },
+                length: {
+                    unit: "inches",
+                    value: 0.30708661386
+                },
+                weight: {
+                    unit: "pounds",
+                    value: 0.37919509064
+                },
+                width: {
+                    unit: "inches",
+                    value: 2.81496062705
+                }
+            },
+            package: {
+                height: {
+                    unit: "inches",
+                    value: 1.2598425184
+                },
+                length: {
+                    unit: "inches",
+                    value: 6.4960629855
+                },
+                weight: {
+                    unit: "pounds",
+                    value: 0.6834330122
+                },
+                width: {
+                    unit: "inches",
+                    value: 3.4645669256
+                }
+            }
+        }
+    ],
+    identifiers: [
+        {
+            marketplaceId: "A21TJRUUN4KGV",
+            identifiers: [
+                {
+                    identifierType: "EAN",
+                    identifier: "0194253412694"
+                },
+                {
+                    identifierType: "UPC",
+                    identifier: "194253412694"
+                }
+            ]
+        }
+    ],
+    images: [
+        {
+            marketplaceId: "A21TJRUUN4KGV",
+            images: [
+                {
+                    variant: "MAIN",
+                    link: "https://m.media-amazon.com/images/I/61bK6PMOC3L.jpg",
+                    height: 2560,
+                    width: 2560
+                },
+                {
+                    variant: "MAIN",
+                    link: "https://m.media-amazon.com/images/I/31VjlrbE3bL.jpg",
+                    height: 500,
+                    width: 500
+                },
+                {
+                    variant: "MAIN",
+                    link: "https://m.media-amazon.com/images/I/31VjlrbE3bL._SL75_.jpg",
+                    height: 75,
+                    width: 75
+                },
+                {
+                    variant: "PT01",
+                    link: "https://m.media-amazon.com/images/I/51Sn5X2gfaL.jpg",
+                    height: 2560,
+                    width: 2560
+                },
+                {
+                    variant: "PT01",
+                    link: "https://m.media-amazon.com/images/I/21edR26hwVL.jpg",
+                    height: 500,
+                    width: 500
+                },
+                {
+                    variant: "PT01",
+                    link: "https://m.media-amazon.com/images/I/21edR26hwVL._SL75_.jpg",
+                    height: 75,
+                    width: 75
+                },
+                {
+                    variant: "PT02",
+                    link: "https://m.media-amazon.com/images/I/71RFKttvm9L.jpg",
+                    height: 2560,
+                    width: 2560
+                },
+                {
+                    variant: "PT02",
+                    link: "https://m.media-amazon.com/images/I/31g2XUsBxwL.jpg",
+                    height: 500,
+                    width: 500
+                },
+                {
+                    variant: "PT02",
+                    link: "https://m.media-amazon.com/images/I/31g2XUsBxwL._SL75_.jpg",
+                    height: 75,
+                    width: 75
+                },
+                {
+                    variant: "PT03",
+                    link: "https://m.media-amazon.com/images/I/61UR88veVzL.jpg",
+                    height: 2560,
+                    width: 2560
+                },
+                {
+                    variant: "PT03",
+                    link: "https://m.media-amazon.com/images/I/3121hxxq2WL.jpg",
+                    height: 500,
+                    width: 500
+                },
+                {
+                    variant: "PT03",
+                    link: "https://m.media-amazon.com/images/I/3121hxxq2WL._SL75_.jpg",
+                    height: 75,
+                    width: 75
+                },
+                {
+                    variant: "PT04",
+                    link: "https://m.media-amazon.com/images/I/711JE+dD1KL.jpg",
+                    height: 2560,
+                    width: 2560
+                },
+                {
+                    variant: "PT04",
+                    link: "https://m.media-amazon.com/images/I/41HXYQ9V9cL.jpg",
+                    height: 500,
+                    width: 500
+                },
+                {
+                    variant: "PT04",
+                    link: "https://m.media-amazon.com/images/I/41HXYQ9V9cL._SL75_.jpg",
+                    height: 75,
+                    width: 75
+                },
+                {
+                    variant: "PT05",
+                    link: "https://m.media-amazon.com/images/I/81LtCGVH+dL.jpg",
+                    height: 2560,
+                    width: 2560
+                },
+                {
+                    variant: "PT05",
+                    link: "https://m.media-amazon.com/images/I/51pi1Od1wlL.jpg",
+                    height: 500,
+                    width: 500
+                },
+                {
+                    variant: "PT05",
+                    link: "https://m.media-amazon.com/images/I/51pi1Od1wlL._SL75_.jpg",
+                    height: 75,
+                    width: 75
+                }
+            ]
+        }
+    ],
+    productTypes: [
+        {
+            marketplaceId: "A21TJRUUN4KGV",
+            productType: "CELLULAR_PHONE"
+        }
+    ],
+    relationships: [
+        {
+            marketplaceId: "A21TJRUUN4KGV",
+            relationships: [
+                {
+                    parentAsins: [
+                        "B0BDSPPRN8"
+                    ],
+                    type: "VARIATION"
+                }
+            ]
+        }
+    ],
+    salesRanks: [
+        {
+            marketplaceId: "A21TJRUUN4KGV",
+            classificationRanks: [
+                {
+                    classificationId: "1805560031",
+                    title: "Smartphones",
+                    link: "https://www.amazon.in/gp/bestsellers/electronics/1805560031",
+                    rank: 1562
+                }
+            ],
+            displayGroupRanks: [
+                {
+                    websiteDisplayGroup: "ce_display_on_website",
+                    title: "Electronics",
+                    link: "https://www.amazon.in/gp/bestsellers/electronics",
+                    rank: 46292
+                }
+            ]
+        }
+    ],
+    summaries: [
+        {
+            marketplaceId: "A21TJRUUN4KGV",
+            brand: "Apple",
+            browseClassification: {
+                displayName: "Smartphones",
+                classificationId: "1805560031"
+            },
+            color: "Blue",
+            itemClassification: "BASE_PRODUCT",
+            itemName: "iPhone 14 512GB Blue",
+            manufacturer: "Apple Computer",
+            size: "512 GB",
+            websiteDisplayGroup: "premium_ce_brands_display_on_website",
+            websiteDisplayGroupName: "Premium Consumer Electronics Brands"
+        }
+    ]
+        })
+        console.log('hello',storedata);
+        // storedata.savedata();
+        const savedata = await storedata.save()
+        console.log(savedata,"savedata")
+        // Fetch Data
+        // const getdata = await User.findOne({username:args.username})
+
+
+        // const updatedata = await User.updateOne({username:args.username},{age:25})
+
+        // const deletedata = await User.deleteOne({username:args.username})
+
+
+        // console.log(getdata,"getdata")
+        // return {
+        //     // ...getdata._doc
+        //     username:getdata.username,
+        //     age:getdata.age,
+        //     phone:getdata.phone,
+        //     address:getdata.address
+        // }
+    }
+}
